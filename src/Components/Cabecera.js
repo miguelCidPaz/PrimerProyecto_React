@@ -47,7 +47,7 @@ class MenuElement extends Component {
         let rows = [];
         let menu = ["Inicio", "Carretera", "Ciudad", "Off Road", "Trail", "Trial", "Casual", "Accesorios"];
         rows = menu.map((itemMenu, index) =>
-            <a key={index++} href={this.props.href} className="enlaceMenu">{itemMenu}</a>)
+            <a key={index} href={this.props.href} className="enlaceMenu">{itemMenu}</a>)
         return rows;
     }
 }
