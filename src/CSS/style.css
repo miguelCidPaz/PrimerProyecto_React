@@ -1,0 +1,384 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+}
+
+.textoNaranja{
+    font-weight: bolder;
+    color: chocolate;
+    cursor: context-menu;
+    font-size: 20px;
+}
+
+/*--------------------*/
+/*------ HEADER ------*/
+/*--------------------*/
+
+.header{
+    background-color: #343335;
+    padding: 1vh;
+    box-shadow: inset 0 -8px 0 chocolate;
+}
+
+.headSuperior{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marca{
+    color: white;
+    font-size: 200%;
+    width: 70%;
+    cursor: context-menu;
+}
+
+.ayuda{
+    width: 30%;
+    min-height: 6vh;
+    padding-top: 1%;
+}
+
+.enlaceAyuda{
+    text-decoration: none;
+    color: white;
+    margin-right: 1vh;
+    font-size: 120%;
+    cursor: pointer;
+}
+
+.headInferior{
+    width: 100%;
+}
+
+.menuPrincipal{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+
+.enlaceMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    color: white;
+    cursor: pointer;
+    width: 10%;
+    font-size: 1em;
+    padding-top: 1.2%;
+    padding-right: 0.2%;
+    padding-bottom: 3%;
+    background-color: chocolate;
+    box-shadow: 0px 0px 1px 0px rgb(207, 204, 204);
+    z-index: 1000;
+}
+
+.enlaceMenu::after{
+    content: '';
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #343335;
+    transition:height 1s;
+    z-index: -1;
+    float: none;
+}
+
+.enlaceMenu:hover::after{
+    transition-duration: 0.5s;
+    float: none;
+    position: absolute;
+    height: 1px;
+    z-index: -1;
+    background-color: #343335;
+}
+
+.enlaceAyuda:hover{
+    transition-duration: 1s;
+    color: chocolate;
+}
+
+/*--------------------*/
+/*------ FASTBAR -----*/
+/*--------------------*/
+
+.fastBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+    min-height: 50px;
+    background-color: rgba(216, 212, 212, 0.479);
+    box-shadow: 0px 0px 5px 0px rgba(158, 156, 156, 0.726);
+}
+
+.fastBarSuperior{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 1%;
+    gap: 30%;
+    width: 80%;
+}
+
+.fastBarInferior{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 4%;
+}
+
+.fastBarGroup{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4%;
+    width: 18%;
+}
+
+.imgFastBar{
+    width: 70%;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px rgb(158, 156, 156);
+}
+
+.nombreProducto{
+    margin-top: 4%;
+    font-size: 110%;
+    font-weight: lighter;
+    background-color: white;
+    width: 65.5%;
+    padding-left: 5%;
+    box-shadow: 0px 0px 5px 0px rgb(158, 156, 156);
+    cursor: context-menu;
+}
+
+.imgFastBar:hover{
+    transition-duration: 0.5s;
+    box-shadow: 0px 0px 10px 2px rgb(158, 156, 156);
+    cursor: pointer;
+}
+
+/* ------------------- */
+/* ------ CUERPO ----- */
+/* ------------------- */
+
+.mid{
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    background-color: rgba(236, 231, 231, 0.479);
+}
+
+.aside{
+    width: 25%;
+    margin-right: 5%;
+    background-color: white;
+    padding: 2%;
+    padding-right: 4%;
+    box-shadow: 0px 0px 5px 0px rgb(158, 156, 156);
+}
+
+.title{
+    font-weight: bolder;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    width: 89%;
+    background-color: transparent;
+}
+
+.categoria{
+    margin-top: 5%;
+    margin-bottom: 20px;
+    font-size: 17px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    border-radius: 5px;
+}
+
+.criterio{
+    background-color: white;
+    width: 87.6%;
+    box-shadow: 0px 0px 5px 0px rgb(158, 156, 156);
+    padding: 1%;
+    cursor: context-menu;
+}
+
+.articulos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.articleGroup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:white;
+    width: 29.3%;
+    box-shadow: 0px 0px 5px 0px rgb(158, 156, 156);
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+.nombreArticulo{
+    margin-bottom: 5%;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bolder;
+    cursor: context-menu;
+}
+
+.imagenArticulo{
+    width: 30%;
+}
+
+.opciones{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 70%;
+    padding:5%;
+    margin-top: 20px;
+}
+
+.compra{
+    background-color: chocolate;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 10px;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.precio{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.paginador{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 3%;
+    background-color: rgba(236, 231, 231, 0.479);
+}
+
+.pagina{
+    padding: 1%;
+    background-color: white;
+    font-weight: bolder;
+    box-shadow: 0px 0px 5px 0px rgb(158, 156, 156);
+}
+
+.compra:hover{
+    transition-duration: 0.5s;
+    background-color: rgb(243, 204, 141);
+    color: black;
+    cursor: pointer;
+}
+
+.categoria:hover{
+    transition-duration:0.5s;
+    background-color: chocolate;
+    color: white;
+    cursor: pointer;
+}
+
+.articleGroup:hover{
+    transition-duration: 0.5s;
+    box-shadow: 0px 0px 10px 2px rgb(158, 156, 156);
+}
+
+.criterio:hover{
+    transition-duration: 0.5s;
+    box-shadow: 0px 0px 15px 1px rgb(158, 156, 156);
+}
+
+.aside:hover{
+    transition-duration: 0.5s;
+    box-shadow: 0px 0px 15px 1px rgb(158, 156, 156);
+}
+
+/*-------------------*/
+/*------ FOOTER -----*/
+/*-------------------*/
+
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #343335;
+    padding: 2%;
+    padding-bottom: 2%;
+}
+
+.footerMenu .enlaceAyuda{
+    font-size: 14px;
+}
+
+.redesSociales{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    width: 50%;
+    margin-top: -1%;
+    padding-left: 3%;
+}
+
+.redSocial{
+    font-family: 'Socials';
+    font-size: 300%;
+    margin-bottom: 1%;
+    width: 5%;
+    color: white;
+    text-decoration: none;
+}
+
+.redSocial:hover{
+    transition-duration: 1s;
+    color: chocolate;
+}
+
+.enlaceAyuda:hover{
+    transition-duration: 1s;
+    color: chocolate;
+}
+
+.pagina:hover{
+    transition-duration: 0.5s;
+    background-color: chocolate;
+    color: white;
+    cursor: pointer;
+}
+

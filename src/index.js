@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Cabecera from './Components/Cabecera';
+import FastBar from './Components/fastBar';
+import Cuerpo from './Components/Cuerpo';
+import Paginador from './Components/Paginador';
+import Footer from './Components/Footer';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Cabecera />
+    <FastBar />
+    <Cuerpo />
+    <Paginador />
+    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
 );
