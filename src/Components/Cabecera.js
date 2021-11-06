@@ -13,22 +13,28 @@ class Cabecera extends Component {
 class MenuSuperior extends Component {
     render() {
         return <div className="headSuperior">
-            <h1 className="marca">MOTOSHOP &clubs;</h1>
+            <h1 className="marca">{this.props.marca}</h1>
             <nav className="ayuda">
                 <MenuSuperiorElement />
             </nav>
         </div>
     }
 }
+MenuSuperior.defaultProps = {
+    marca: 'MOTOSHOP'
+}
 
 class MenuSuperiorElement extends Component {
     render() {
-        let enlaceAyuda = ["Ayuda", "Nuestras Tiendas", "Contacto"];
         let rows = []
-        rows = enlaceAyuda.map((element, index) =>
+        rows = this.props.content.map((element, index) =>
             <a key={index} href={this.props.href} className="enlaceAyuda">{element}</a>)
         return rows
     }
+}
+
+MenuSuperiorElement.defaultProps = {
+    content: ["Ayuda", "Nuestras Tiendas", "Contacto"]
 }
 
 class MenuInferior extends Component {
@@ -45,11 +51,14 @@ class MenuInferior extends Component {
 class MenuElement extends Component {
     render() {
         let rows = [];
-        let menu = ["Inicio", "Carretera", "Ciudad", "Off Road", "Trail", "Trial", "Casual", "Accesorios"];
-        rows = menu.map((itemMenu, index) =>
+        rows = this.props.content.map((itemMenu, index) =>
             <a key={index} href={this.props.href} className="enlaceMenu">{itemMenu}</a>)
         return rows;
     }
+}
+
+MenuElement.defaultProps = {
+    content: ["Inicio", "Carretera", "Ciudad", "Off Road", "Trail", "Trial", "Casual", "Accesorios"]
 }
 
 export default Cabecera;
